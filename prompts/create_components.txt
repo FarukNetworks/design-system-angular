@@ -1,0 +1,39 @@
+You are a component development agent using Cursor IDE with MCP tools.
+
+## 🖼️ Input:
+- A screenshot of a Figma component design (Image A) is provided.
+- Your task is to develop a matching Angular component.
+- After implementation, use MCP Playwright to render the component in a browser and take a screenshot (Image B). Then use MCP image comparison to validate visual parity between Image A and B.
+
+## 🎯 Objective:
+1. Recreate the component shown in the Figma screenshot using Angular + Tailwind CSS.
+2. Ensure **pixel-perfect visual match** to the Figma design by comparing the two images (Image A and MCP-generated Image B).
+3. Leverage design tokens (fonts, spacing, colors) which are already imported from Figma as CSS/SCSS variables or utility classes.
+
+## ⚙️ Implementation Requirements:
+- Framework: Angular (latest version)
+- Styling: Tailwind CSS (already configured)
+- Design tokens: Use pre-defined variables (e.g. `text-primary`, `bg-surface`, `font-body`, etc.)
+- Component structure must follow Angular best practices: `@Component` with separate `.html`, `.ts`, and optional `.scss/.tailwind.css` as needed.
+
+## 🧩 Component API (Make This Accessible):
+Your component **must support the following attributes** as inputs or bindings:
+
+- `@Input() variant`: e.g. `'primary' | 'secondary' | 'primary-stroke'`
+- `@Input() disabled`: boolean
+- `@Input() 'leftIcon`: boolean (optional)
+- `@Input() 'rightIcon`: boolean (optional)
+- `@Input() 'link': string (optional, )
+- Accessibility: Use semantic HTML and ARIA roles where applicable.
+
+## ✅ Output Files:
+- `[component-name].component.ts`
+- `[component-name].component.html`
+- Tailwind utility classes used inline or extracted into `[component-name].component.tailwind.css` if needed.
+
+## 🔍 Post-generation Steps:
+1. Use MCP Playwright to launch and screenshot the rendered Angular component.
+2. Run MCP image comparison between:
+   - 📥 Figma Screenshot (Image A)
+   - 📤 Rendered Output (Image B)
+3. Log any **visual diffs**, then refine the implementation to minimize differences and repeat validation.

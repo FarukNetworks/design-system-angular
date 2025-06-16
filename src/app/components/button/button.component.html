@@ -1,0 +1,57 @@
+<ng-container *ngIf="link; else buttonTemplate">
+  <a [href]="link" [class]="buttonClasses" [attr.aria-label]="ariaLabel" [attr.aria-disabled]="disabled"
+    [attr.tabindex]="disabled ? -1 : 0" role="button">
+
+    <!-- Left Icon -->
+    <span *ngIf="hasLeftIcon()" class="flex items-center">
+      <!-- Custom SVG Icon -->
+      <span *ngIf="leftIconCustom" [innerHTML]="leftIconSvg" [class]="iconClasses + 'w-[12px] h-[12px] text-current'"
+        aria-hidden="true"></span>
+      <!-- Font Awesome/Library Icon -->
+      <i *ngIf="leftIcon" [class]="leftIcon + ' ' + iconClasses" aria-hidden="true"></i>
+    </span>
+
+    <!-- Button Content -->
+    <span class="font-semibold uppercase tracking-wide">
+      <ng-content></ng-content>
+    </span>
+
+    <!-- Right Icon -->
+    <span *ngIf="hasRightIcon()" class="flex items-center">
+      <!-- Custom SVG Icon -->
+      <span *ngIf="rightIconCustom" [innerHTML]="rightIconSvg" [class]="iconClasses + 'w-[12px] h-[12px] text-current'"
+        aria-hidden="true"></span>
+      <!-- Font Awesome/Library Icon -->
+      <i *ngIf="rightIcon" [class]="rightIcon + ' ' + iconClasses" aria-hidden="true"></i>
+    </span>
+  </a>
+</ng-container>
+
+<ng-template #buttonTemplate>
+  <button [type]="type" [class]="buttonClasses" [disabled]="disabled" [attr.aria-label]="ariaLabel"
+    (click)="onClick($event)">
+
+    <!-- Left Icon -->
+    <span *ngIf="hasLeftIcon()" class="flex items-center">
+      <!-- Custom SVG Icon -->
+      <span *ngIf="leftIconCustom" [innerHTML]="leftIconSvg" [class]="iconClasses + ' text-current'"
+        aria-hidden="true"></span>
+      <!-- Font Awesome/Library Icon -->
+      <i *ngIf="leftIcon" [class]="leftIcon + ' ' + iconClasses" aria-hidden="true"></i>
+    </span>
+
+    <!-- Button Content -->
+    <span class="font-semibold uppercase tracking-wide">
+      <ng-content></ng-content>
+    </span>
+
+    <!-- Right Icon -->
+    <span *ngIf="hasRightIcon()" class="flex items-center">
+      <!-- Custom SVG Icon -->
+      <span *ngIf="rightIconCustom" [innerHTML]="rightIconSvg" [class]="iconClasses + ' text-current'"
+        aria-hidden="true"></span>
+      <!-- Font Awesome/Library Icon -->
+      <i *ngIf="rightIcon" [class]="rightIcon + ' ' + iconClasses" aria-hidden="true"></i>
+    </span>
+  </button>
+</ng-template>

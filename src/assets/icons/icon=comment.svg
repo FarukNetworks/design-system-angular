@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon=comment" clip-path="url(#clip0_23_407)">
+<path id="vector" d="M16 16L15.992 1.6C15.992 0.72 15.28 0 14.4 0H1.6C0.72 0 0 0.72 0 1.6V11.2C0 12.08 0.72 12.8 1.6 12.8H12.8L16 16ZM12 5.6V7.2H8.8V10.4H7.2V7.2H4V5.6H7.2V2.4H8.8V5.6H12Z" fill="#223F44"/>
+</g>
+<defs>
+<clipPath id="clip0_23_407">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

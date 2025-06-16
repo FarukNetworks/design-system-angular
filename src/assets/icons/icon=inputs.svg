@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon=inputs" clip-path="url(#clip0_30_276)">
+<path id="vector" d="M8.49154 7.00583L0 7.00585V3.42857C0 1.50857 1.50857 0 3.42857 0H12.5714C14.4914 0 16 1.50857 16 3.42857V12.5714C16 14.4914 14.4914 16 12.5714 16H3.42857C1.50857 16 0 14.4914 0 12.5714V8.99417H8.49154L6.05714 11.4169L7.46297 12.8227L12.2857 8L7.46297 3.17726L6.05714 4.58309L8.49154 7.00583Z" fill="#223F44"/>
+</g>
+<defs>
+<clipPath id="clip0_30_276">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon=cross-circle" clip-path="url(#clip0_199_8763)">
+<path id="vector" fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58173 0 0 3.58172 0 8C0 12.4183 3.58173 16 8 16ZM8 7.27273L4.72729 4L4 4.72727L7.27271 7.99999L4 11.2727L4.72729 12L8 8.72727L11.2727 12L12 11.2727L8.72729 8.00001L12 4.72727L11.2727 4L8 7.27273Z" fill="#223F44"/>
+</g>
+<defs>
+<clipPath id="clip0_199_8763">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

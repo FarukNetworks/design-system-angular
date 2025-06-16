@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+This project uses Tailwind CSS make sure to follow the best practices for using Tailwind CSS framework.
+
+Components are stored into src/app/components folder
+Pages are stored into src/app/pages/pageName folder
+
+For each new component development task:
+
+1. You will receive a Figma design image showing the expected component appearance
+2. After implementing the component, use MCP Playwright to capture a screenshot of the actual rendered component in the browser
+3. Use MCP Process Image to compare both images (Figma design vs actual implementation) for visual validation
+4. Ensure the implementation matches the design specifications including layout, spacing, colors, typography, and responsive behavior
+5. Make necessary adjustments if discrepancies are found between the design and implementation
+
+For each task you need to use MCP Sequential Thinking

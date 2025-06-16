@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon=feed" clip-path="url(#clip0_23_533)">
+<path id="vector" d="M0 3.2C7.0696 3.2 12.8 8.9304 12.8 16H16C16 7.1632 8.8368 0 0 0V3.2ZM6.4 16H9.6C9.6 10.6976 5.3024 6.4 0 6.4V9.6C3.5344 9.6 6.4 12.4656 6.4 16ZM0 14.4C0 13.5164 0.7164 12.8 1.6 12.8C2.4836 12.8 3.2 13.5164 3.2 14.4C3.2 15.2836 2.4836 16 1.6 16C0.7164 16 0 15.2836 0 14.4Z" fill="#223F44"/>
+</g>
+<defs>
+<clipPath id="clip0_23_533">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

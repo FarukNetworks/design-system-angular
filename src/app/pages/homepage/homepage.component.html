@@ -1,0 +1,18 @@
+<main class="min-h-screen bg-white p-8">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-24 font-semibold text-grey-1 mb-10">Design System Components</h1>
+    <h2 class="text-24 font-semibold text-grey-1 mb-2">Button Component</h2>
+
+    <!-- Single Primary Button with Duplicate Icons -->
+    <div class="flex items-center gap-10">
+      <app-button variant="primary" leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
+        type="button">
+        PRIMARY FILL
+      </app-button>
+      <app-button [disabled]="true" leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
+        type="button">
+        PRIMARY FILL
+      </app-button>
+    </div>
+  </div>
+</main>
