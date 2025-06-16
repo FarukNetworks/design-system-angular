@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+a:focus-within,
+a:active,
+a:focus,
+button:focus {
+  outline: none !important;
+}
 
 /* Design System Color Variables */
 :root {
@@ -52,7 +60,7 @@
   --color-green-2: #e9f6ec;
   --color-green-3: #c2e7c7;
   --color-green-4: #4a9a36;
-  --color-green-5: #356821;
+  --color-green-5: #358621;
 
   /* Red */
   --color-red-1: #ea5441;

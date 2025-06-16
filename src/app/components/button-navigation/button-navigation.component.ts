@@ -11,19 +11,12 @@ import { IconService } from '../../shared/services/icon.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-export type ButtonVariant =
-  | 'primary'
-  | 'secondary'
-  | 'primary-stroke'
-  | 'secondary-stroke';
-
 @Component({
-  selector: 'app-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
+  selector: 'app-button-navigation',
+  templateUrl: './button-navigation.component.html',
+  styleUrls: ['./button-navigation.component.scss'],
 })
-export class ButtonComponent implements OnInit, OnDestroy {
-  @Input() variant: ButtonVariant = 'primary';
+export class ButtonNavigationComponent implements OnInit, OnDestroy {
   @Input() disabled: boolean = false;
 
   // Icon library icons (Font Awesome, etc.)
@@ -34,7 +27,6 @@ export class ButtonComponent implements OnInit, OnDestroy {
   @Input() leftIconCustom: string = '';
   @Input() rightIconCustom: string = '';
 
-  @Input() link: string = '';
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Input() ariaLabel: string = '';
 
@@ -93,30 +85,19 @@ export class ButtonComponent implements OnInit, OnDestroy {
     const baseClasses =
       'flex gap-[8px] items-center justify-center font-semibold transition-all duration-300';
 
-    // Size classes with 4px border radius
+    // Size classes with border radius (same as regular button)
     const sizeClasses = 'px-5 py-1.5 text-12 rounded';
 
-    // Variant classes
-    const variantClasses = {
-      primary: this.disabled
-        ? 'bg-navy-1-10 text-grey-5 cursor-not-allowed'
-        : 'bg-green-1 hover:bg-green-4 active:bg-green-5 text-white',
-      secondary: this.disabled
-        ? 'bg-navy-1-10 text-grey-5 cursor-not-allowed'
-        : 'bg-navy-3 hover:bg-navy-4 active:bg-navy-5 text-white',
-      'primary-stroke': this.disabled
-        ? 'bg-navy-1-10 text-grey-5 cursor-not-allowed'
-        : 'border border-green-1 text-green-1 hover:bg-navy-1-5 hover:border-green-4 hover:text-green-4 active:bg-navy-1-5 active:border-green-5 active:text-green-5 bg-transparent',
-      'secondary-stroke': this.disabled
-        ? 'bg-navy-1-10 text-grey-5 cursor-not-allowed'
-        : 'border border-navy-3 text-navy-3 hover:bg-navy-1-5 active:bg-navy-1-5 hover:border-navy-4 hover:text-navy-4 active:border-navy-5 active:text-navy-5 bg-transparent',
-    };
+    // Navigation button styling - single variant with disabled state
+    const variantClasses = this.disabled
+      ? 'bg-navy-1-10 text-white-40 cursor-not-allowed'
+      : 'bg-white-0 hover:bg-white-10 active:bg-white-20 border border-white text-white';
 
-    return `${baseClasses} ${sizeClasses} ${variantClasses[this.variant]}`;
+    return `${baseClasses} ${sizeClasses} ${variantClasses}`;
   }
 
   get iconClasses(): string {
-    // 12px icons (w-3 h-3)
+    // 12px icons (w-3 h-3) - same as regular button
     return 'customIcon';
   }
 

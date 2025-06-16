@@ -1,0 +1,13 @@
+// Button Navigation Component Styles
+
+// Ensure proper focus styling for accessibility
+button {
+  &:focus {
+    outline: 2px solid var(--color-blue-3);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}

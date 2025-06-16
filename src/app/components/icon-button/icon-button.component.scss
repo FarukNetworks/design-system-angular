@@ -1,0 +1,24 @@
+// Icon Button Component Styles
+
+// CSS Variables for Figma specifications
+:host {
+  --padding-s: 8px;
+  --gap-s: 8px;
+}
+
+// Ensure proper focus styling for accessibility
+button {
+  &:focus {
+    outline: 2px solid var(--color-blue-3);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  // Ensure perfect square shape
+  &.flex {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,17 @@
+<button [class]="buttonClasses" [disabled]="disabled" [attr.aria-label]="ariaLabel" (click)="onClick($event)">
+  <!-- Notification Icon (Left Side) -->
+  <span class="flex items-center">
+    <span [innerHTML]="notificationIconSvg" [class]="iconClasses" aria-hidden="true"></span>
+  </span>
+
+  <!-- Notification Text -->
+  <span class="font-semibold uppercase tracking-wide flex items-center gap-0.5">
+    <span>NOTIFICATIONS</span>
+    <span>
+      <span *ngIf="hasNumber">{{ '(' }}{{ displayNumber }}{{ ')' }}</span>
+      <span *ngIf="!hasNumber">{{ '(' }}0{{ ')' }}</span>
+    </span>
+  </span>
+
+
+</button>

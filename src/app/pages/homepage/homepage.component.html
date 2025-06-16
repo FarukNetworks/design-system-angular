@@ -1,18 +1,74 @@
 <main class="min-h-screen bg-white p-8">
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-5xl mx-auto">
     <h1 class="text-24 font-semibold text-grey-1 mb-10">Design System Components</h1>
-    <h2 class="text-24 font-semibold text-grey-1 mb-2">Button Component</h2>
 
-    <!-- Single Primary Button with Duplicate Icons -->
+
+    <!-- Buttons Component -->
+    <h2 class="text-20 font-semibold text-grey-1 mb-2">Button Component Primary Fill</h2>
     <div class="flex items-center gap-10">
       <app-button variant="primary" leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
         type="button">
         PRIMARY FILL
       </app-button>
+      <app-button variant="secondary" leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
+        type="button">
+        SECONDARY FILL
+      </app-button>
+      <app-button variant="primary-stroke" leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
+        type="button">
+        PRIMARY STROKE
+      </app-button>
+      <app-button variant="secondary-stroke" leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
+        type="button">
+        SECONDARY STROKE
+      </app-button>
       <app-button [disabled]="true" leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
         type="button">
-        PRIMARY FILL
+        DISABLED
       </app-button>
+    </div>
+
+
+    <!--- Button Links --->
+    <h2 class="text-20 font-semibold text-grey-1 mb-2 mt-10">Button Links</h2>
+    <div class="flex items-center gap-10">
+      <app-button-link variant="primary" href="#">Primary Link</app-button-link>
+      <app-button-link variant="secondary" href="#">Primary Link</app-button-link>
+      <app-button-link variant="primary" href="#" [disabled]="true">Primary Link</app-button-link>
+    </div>
+
+    <!--- Notification Buttons --->
+    <h2 class="text-20 font-semibold text-grey-1 mb-2 mt-10">Notification Buttons</h2>
+    <div class="flex items-center gap-10">
+      <app-notification-button [number]="1"></app-notification-button>
+      <app-notification-button [number]="0"></app-notification-button>
+      <app-notification-button [disabled]="true" [number]="0"></app-notification-button>
+    </div>
+
+    <!--- Button Link Notification --->
+    <h2 class="text-20 font-semibold text-grey-1 mb-2 mt-10">Button Link Notification</h2>
+    <div class="flex items-center gap-10">
+      <app-button-link-notification href="#">Primary Link Notification</app-button-link-notification>
+      <app-button-link-notification href="#" [disabled]="true">Primary Link Notification</app-button-link-notification>
+    </div>
+
+    <!--- Button Navigation --->
+    <h2 class="text-20 font-semibold text-grey-1 mb-2 mt-10">Button Navigation</h2>
+    <div class="flex items-center gap-10 bg-navy-1 p-5 rounded">
+      <app-button-navigation leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg">MENU
+        OUTLINE</app-button-navigation>
+      <app-button-navigation leftIconCustom="icon=duplicate.svg" rightIconCustom="icon=duplicate.svg"
+        [disabled]="true">MENU OUTLINE</app-button-navigation>
+    </div>
+
+    <!--- Icon Buttons --->
+    <h2 class="text-20 font-semibold text-grey-1 mb-2 mt-10">Icon Buttons</h2>
+    <div class="flex items-center gap-4 p-5">
+      <!-- Default Variant -->
+      <app-icon-button variant="default" iconCustom="icon=arrow-left.svg" ariaLabel="Previous"></app-icon-button>
+      <app-icon-button variant="stroke" iconCustom="icon=arrow-left.svg" ariaLabel="Next"></app-icon-button>
+      <app-icon-button variant="default" iconCustom="icon=arrow-left.svg" ariaLabel="Previous Disabled"
+        [disabled]="true"></app-icon-button>
     </div>
   </div>
 </main>

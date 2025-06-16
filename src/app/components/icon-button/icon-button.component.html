@@ -1,0 +1,8 @@
+<button [type]="type" [class]="buttonClasses" [disabled]="disabled" [attr.aria-label]="ariaLabel"
+  (click)="onClick($event)">
+  <!-- Custom SVG Icon -->
+  <span *ngIf="iconCustom" [innerHTML]="iconSvg" [class]="iconClasses" aria-hidden="true"></span>
+
+  <!-- Font Awesome/Library Icon -->
+  <i *ngIf="icon" [class]="icon + ' ' + iconClasses" aria-hidden="true"></i>
+</button>

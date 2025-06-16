@@ -1,0 +1,23 @@
+// Button Link Notification Component Styles
+.font-source-sans-pro {
+  font-family: var(--font-family-primary);
+}
+
+// Ensure proper underline styling matches the specification
+a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+
+  &:focus {
+    outline: 2px solid var(--color-blue-3);
+    outline-offset: 2px;
+  }
+
+  &[aria-disabled="true"] {
+    pointer-events: none;
+  }
+}
